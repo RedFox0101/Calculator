@@ -6589,10 +6589,8 @@ struct PanelSettings_t0621207D5DD3BB89DB587440E8F9E07234283DEC  : public Scripta
 	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___m_TargetRect_29;
 	// System.Single UnityEngine.UIElements.PanelSettings::m_ResolvedScale
 	float ___m_ResolvedScale_30;
-	// System.Int32 UnityEngine.UIElements.PanelSettings::m_EmptyPanelCounter
-	int32_t ___m_EmptyPanelCounter_31;
 	// System.Func`2<UnityEngine.Vector2,UnityEngine.Vector2> UnityEngine.UIElements.PanelSettings::m_AssignedScreenToPanel
-	Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* ___m_AssignedScreenToPanel_32;
+	Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* ___m_AssignedScreenToPanel_31;
 };
 
 // UnityEngine.UIElements.UIR.RenderChain
@@ -8725,8 +8723,6 @@ inline int32_t List_1_get_Count_m7815A717B09CAEC89641E8E2FE8AC5BD39BD213B_inline
 {
 	return ((  int32_t (*) (List_1_t74EC90C5F42E1A99F29BC6A7FF27FD27FCF98344*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
 }
-// System.Void UnityEngine.UIElements.PanelSettings/RuntimePanelAccess::MarkPotentiallyEmpty()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimePanelAccess_MarkPotentiallyEmpty_m4F347CECCE8BE1B833C0D6714E5B445A01BDA932 (RuntimePanelAccess_t88FC30C79AE159279E2BB55A190D2E69259B7482* __this, const RuntimeMethod* method) ;
 // UnityEngine.UIElements.BaseRuntimePanel UnityEngine.UIElements.PanelSettings/RuntimePanelAccess::CreateRelatedRuntimePanel()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BaseRuntimePanel_tEDFA512CC6692082EBBB87E5DC446A88D2E75DC4* RuntimePanelAccess_CreateRelatedRuntimePanel_mAAC52AFAF1D070A24DEEDA11A44104E3EB107763 (RuntimePanelAccess_t88FC30C79AE159279E2BB55A190D2E69259B7482* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.BaseRuntimePanel::set_sortingPriority(System.Single)
@@ -8743,8 +8739,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CreateRuntimePanelDelegate__ctor_m1DF50B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BaseRuntimePanel_tEDFA512CC6692082EBBB87E5DC446A88D2E75DC4* UIElementsRuntimeUtility_FindOrCreateRuntimePanel_m59FFEF5510575CC0940AE27137D148C58FA898C9 (ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* ___ownerObject0, CreateRuntimePanelDelegate_t7E3FB54A953B205ED387CEDE488C803E18813B91* ___createDelegate1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.UIElementsRuntimeUtility::DisposeRuntimePanel(UnityEngine.ScriptableObject)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIElementsRuntimeUtility_DisposeRuntimePanel_m854C277F5D207DA12F24ACC3B8A94060B2FAEEB2 (ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* ___ownerObject0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.UIElements.UIElementsRuntimeUtility::MarkPotentiallyEmpty(UnityEngine.UIElements.PanelSettings)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIElementsRuntimeUtility_MarkPotentiallyEmpty_m6A9F92E2E060B0050B82CC56517CFA99ED81096D (PanelSettings_t0621207D5DD3BB89DB587440E8F9E07234283DEC* ___settings0, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<UnityEngine.UIElements.IEventDispatchingStrategy>::.ctor()
 inline void List_1__ctor_m856D83183F6F5CDDE65CD7A3B8DBF24E3630CC2F (List_1_t2F690D65CDFD8A655A39952668F912C3F99B0434* __this, const RuntimeMethod* method)
 {
@@ -19455,7 +19449,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelSettings__ctor_m2B0F3A1761ED3A09F49
 		L_2 = DynamicAtlasSettings_get_defaults_m98A7C68E5FD3C3F1A7DCDA8740B3F9B24A9FA67D(NULL);
 		__this->___m_DynamicAtlasSettings_24 = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DynamicAtlasSettings_24), (void*)L_2);
-		__this->___m_EmptyPanelCounter_31 = 0;
 		ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF(__this, NULL);
 		RuntimePanelAccess_t88FC30C79AE159279E2BB55A190D2E69259B7482* L_3 = (RuntimePanelAccess_t88FC30C79AE159279E2BB55A190D2E69259B7482*)il2cpp_codegen_object_new(RuntimePanelAccess_t88FC30C79AE159279E2BB55A190D2E69259B7482_il2cpp_TypeInfo_var);
 		NullCheck(L_3);
@@ -19514,16 +19507,6 @@ IL_0031:
 }
 // System.Void UnityEngine.UIElements.PanelSettings::OnDisable()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelSettings_OnDisable_m7BB1568F3227B496CC1F5C079F27B81149CE9A78 (PanelSettings_t0621207D5DD3BB89DB587440E8F9E07234283DEC* __this, const RuntimeMethod* method) 
-{
-	{
-		RuntimePanelAccess_t88FC30C79AE159279E2BB55A190D2E69259B7482* L_0 = __this->___m_PanelAccess_22;
-		NullCheck(L_0);
-		RuntimePanelAccess_DisposePanel_mEFFD4B1D7BD1657E709E9642EB9B198B7EDD34F2(L_0, NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.UIElements.PanelSettings::DisposePanel()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelSettings_DisposePanel_m64D662F1464996D0478AA9026565492AF9BD4961 (PanelSettings_t0621207D5DD3BB89DB587440E8F9E07234283DEC* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimePanelAccess_t88FC30C79AE159279E2BB55A190D2E69259B7482* L_0 = __this->___m_PanelAccess_22;
@@ -19985,11 +19968,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelSettings_SetScreenToPanelSpaceFunct
 {
 	{
 		Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* L_0 = ___screentoPanelSpaceFunction0;
-		__this->___m_AssignedScreenToPanel_32 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AssignedScreenToPanel_32), (void*)L_0);
+		__this->___m_AssignedScreenToPanel_31 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AssignedScreenToPanel_31), (void*)L_0);
 		BaseRuntimePanel_tEDFA512CC6692082EBBB87E5DC446A88D2E75DC4* L_1;
 		L_1 = PanelSettings_get_panel_m891034F3C74151D92608232F4DC2FD418AA866E5(__this, NULL);
-		Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* L_2 = __this->___m_AssignedScreenToPanel_32;
+		Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* L_2 = __this->___m_AssignedScreenToPanel_31;
 		NullCheck(L_1);
 		BaseRuntimePanel_set_screenToPanelSpace_m438D407340496BA6CB1635E70A4B26ED035E3DAE(L_1, L_2, NULL);
 		return;
@@ -20450,7 +20433,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelSettings_DetachUIDocument_m6DE0378F
 		}
 	}
 	{
-		goto IL_0041;
+		goto IL_0043;
 	}
 
 IL_0011:
@@ -20469,16 +20452,16 @@ IL_0011:
 		bool L_7 = V_1;
 		if (!L_7)
 		{
-			goto IL_0041;
+			goto IL_0043;
 		}
 	}
 	{
 		RuntimePanelAccess_t88FC30C79AE159279E2BB55A190D2E69259B7482* L_8 = __this->___m_PanelAccess_22;
 		NullCheck(L_8);
-		RuntimePanelAccess_MarkPotentiallyEmpty_m4F347CECCE8BE1B833C0D6714E5B445A01BDA932(L_8, NULL);
+		RuntimePanelAccess_DisposePanel_mEFFD4B1D7BD1657E709E9642EB9B198B7EDD34F2(L_8, NULL);
 	}
 
-IL_0041:
+IL_0043:
 	{
 		return;
 	}
@@ -20593,7 +20576,7 @@ IL_00a4:
 	{
 		PanelSettings_t0621207D5DD3BB89DB587440E8F9E07234283DEC* L_23 = __this->___m_Settings_0;
 		NullCheck(L_23);
-		Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* L_24 = L_23->___m_AssignedScreenToPanel_32;
+		Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* L_24 = L_23->___m_AssignedScreenToPanel_31;
 		V_3 = (bool)((!(((RuntimeObject*)(Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA*)L_24) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_25 = V_3;
 		if (!L_25)
@@ -20605,7 +20588,7 @@ IL_00a4:
 		PanelSettings_t0621207D5DD3BB89DB587440E8F9E07234283DEC* L_26 = __this->___m_Settings_0;
 		PanelSettings_t0621207D5DD3BB89DB587440E8F9E07234283DEC* L_27 = __this->___m_Settings_0;
 		NullCheck(L_27);
-		Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* L_28 = L_27->___m_AssignedScreenToPanel_32;
+		Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* L_28 = L_27->___m_AssignedScreenToPanel_31;
 		NullCheck(L_26);
 		PanelSettings_SetScreenToPanelSpaceFunction_mD50D5285FA3692C92D9072894FDAD36A5D320A57(L_26, L_28, NULL);
 	}
@@ -20781,22 +20764,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimePanelAccess_DisposeRelatedPanel_m
 		PanelSettings_t0621207D5DD3BB89DB587440E8F9E07234283DEC* L_0 = __this->___m_Settings_0;
 		il2cpp_codegen_runtime_class_init_inline(UIElementsRuntimeUtility_t40591BFE969CBBBB42A0B326B4DDE04637D7279F_il2cpp_TypeInfo_var);
 		UIElementsRuntimeUtility_DisposeRuntimePanel_m854C277F5D207DA12F24ACC3B8A94060B2FAEEB2(L_0, NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.UIElements.PanelSettings/RuntimePanelAccess::MarkPotentiallyEmpty()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimePanelAccess_MarkPotentiallyEmpty_m4F347CECCE8BE1B833C0D6714E5B445A01BDA932 (RuntimePanelAccess_t88FC30C79AE159279E2BB55A190D2E69259B7482* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIElementsRuntimeUtility_t40591BFE969CBBBB42A0B326B4DDE04637D7279F_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		PanelSettings_t0621207D5DD3BB89DB587440E8F9E07234283DEC* L_0 = __this->___m_Settings_0;
-		il2cpp_codegen_runtime_class_init_inline(UIElementsRuntimeUtility_t40591BFE969CBBBB42A0B326B4DDE04637D7279F_il2cpp_TypeInfo_var);
-		UIElementsRuntimeUtility_MarkPotentiallyEmpty_m6A9F92E2E060B0050B82CC56517CFA99ED81096D(L_0, NULL);
 		return;
 	}
 }

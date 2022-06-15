@@ -6976,10 +6976,8 @@ struct PanelSettings_t0621207D5DD3BB89DB587440E8F9E07234283DEC  : public Scripta
 	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___m_TargetRect_29;
 	// System.Single UnityEngine.UIElements.PanelSettings::m_ResolvedScale
 	float ___m_ResolvedScale_30;
-	// System.Int32 UnityEngine.UIElements.PanelSettings::m_EmptyPanelCounter
-	int32_t ___m_EmptyPanelCounter_31;
 	// System.Func`2<UnityEngine.Vector2,UnityEngine.Vector2> UnityEngine.UIElements.PanelSettings::m_AssignedScreenToPanel
-	Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* ___m_AssignedScreenToPanel_32;
+	Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* ___m_AssignedScreenToPanel_31;
 };
 
 // UnityEngine.UIElements.StyleSheet
@@ -16252,7 +16250,7 @@ IL_003e:
 	}
 	{
 		V_3 = (bool)0;
-		goto IL_009e;
+		goto IL_00a5;
 	}
 
 IL_0046:
@@ -16273,7 +16271,7 @@ IL_0049:
 	}
 	{
 		V_3 = (bool)0;
-		goto IL_009e;
+		goto IL_00a5;
 	}
 
 IL_005e:
@@ -16284,32 +16282,33 @@ IL_005e:
 		bool L_11 = V_5;
 		if (!L_11)
 		{
-			goto IL_0084;
+			goto IL_008b;
 		}
 	}
 	{
-		__this->___m_HasInlineTranslate_10 = (bool)0;
 		bool L_12;
 		L_12 = InlineStyleAccess_RemoveInlineStyle_m225E781B5CCEC21106CDE484CB72371A14BEB0BC(__this, ((int32_t)327683), NULL);
-		V_3 = L_12;
-		goto IL_009e;
+		__this->___m_HasInlineTranslate_10 = (bool)0;
+		bool L_13 = __this->___m_HasInlineTranslate_10;
+		V_3 = L_13;
+		goto IL_00a5;
 	}
 
-IL_0084:
+IL_008b:
 	{
-		StyleTranslate_tF9528CA4B45EE4EB2C4D294336A83D88DB6AF089 L_13 = ___inlineValue0;
-		__this->___m_InlineTranslateOperation_11 = L_13;
-		__this->___m_HasInlineTranslate_10 = (bool)1;
 		StyleTranslate_tF9528CA4B45EE4EB2C4D294336A83D88DB6AF089 L_14 = ___inlineValue0;
-		InlineStyleAccess_ApplyStyleTranslate_mF29CB2DC00F87495F056B1CBE89AD6D37759E8DD(__this, L_14, NULL);
+		__this->___m_InlineTranslateOperation_11 = L_14;
+		__this->___m_HasInlineTranslate_10 = (bool)1;
+		StyleTranslate_tF9528CA4B45EE4EB2C4D294336A83D88DB6AF089 L_15 = ___inlineValue0;
+		InlineStyleAccess_ApplyStyleTranslate_mF29CB2DC00F87495F056B1CBE89AD6D37759E8DD(__this, L_15, NULL);
 		V_3 = (bool)1;
-		goto IL_009e;
+		goto IL_00a5;
 	}
 
-IL_009e:
+IL_00a5:
 	{
-		bool L_15 = V_3;
-		return L_15;
+		bool L_16 = V_3;
+		return L_16;
 	}
 }
 // System.Void UnityEngine.UIElements.InlineStyleAccess::ApplyStyleTranslate(UnityEngine.UIElements.StyleTranslate)
