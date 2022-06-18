@@ -40,57 +40,43 @@ extern void ButtonScript_Start_m8B6809AE1C4A4E3B431BBC17203BE7FE8C23DFBC (void);
 extern void ButtonScript_SetData_m0977BE927779A78F77CEAA018B73E187DF48095B (void);
 // 0x0000000E System.Void ButtonScript::.ctor()
 extern void ButtonScript__ctor_m8877AA5F1151123B36B4513BD26E3547494C3FB8 (void);
-// 0x0000000F System.String Calculator::CalculateRelult(System.Collections.Generic.List`1<System.String>)
-extern void Calculator_CalculateRelult_mC42F5FF111CBB06F948B75375549C6A30BD72ECC (void);
-// 0x00000010 System.Single Calculator::CalculateResult(System.Collections.Generic.List`1<System.String>,System.Int32,Calculator/Operation)
-extern void Calculator_CalculateResult_mB92A57B73B4E22086808FB60959C31F137FD6578 (void);
-// 0x00000011 System.Void Calculator::DeleteDeleting?alculations(System.Collections.Generic.List`1<System.String>,System.Int32,System.Single)
-extern void Calculator_DeleteDeletingU421alculations_mBBCFC6AC7E1909DA6BC3C5DFC26A49EBF1D64FF8 (void);
-// 0x00000012 System.Single Calculator::ConverToFloat(System.String)
-extern void Calculator_ConverToFloat_mF36D166A32B1AD3B6F85F0F3B1CF8ABEDBA1140D (void);
-// 0x00000013 System.Void Calculator::.ctor()
+// 0x0000000F Operand Calculator::CalculateRelult(System.Collections.Generic.List`1<System.String>,System.Collections.Generic.List`1<Operand>)
+extern void Calculator_CalculateRelult_m5411728A22BBFAB233F7B1499F3EEFEBEB0F3A96 (void);
+// 0x00000010 System.Void Calculator::DeleteData(System.Collections.Generic.List`1<System.String>,System.Collections.Generic.List`1<Operand>,System.Single,System.Int32)
+extern void Calculator_DeleteData_mC63BA568A6123DE75D883C735D61C8F289A9FAEB (void);
+// 0x00000011 System.Void Calculator::.ctor()
 extern void Calculator__ctor_m200AB354A8511A054C991ABA75694DC588E87EEC (void);
-// 0x00000014 System.Void Calculator/Operation::.ctor(System.Object,System.IntPtr)
-extern void Operation__ctor_m4BB0340601CE0D8E31F235FE5AE1FA9CE80CEF0D (void);
-// 0x00000015 System.Single Calculator/Operation::Invoke(System.Single,System.Single)
-extern void Operation_Invoke_m6A59DE7E7F6F416BBBEC6313A032005CECFAB1DE (void);
-// 0x00000016 System.IAsyncResult Calculator/Operation::BeginInvoke(System.Single,System.Single,System.AsyncCallback,System.Object)
-extern void Operation_BeginInvoke_mED0A458C1D3534A2A835FD8969A8C5C78F57FF19 (void);
-// 0x00000017 System.Single Calculator/Operation::EndInvoke(System.IAsyncResult)
-extern void Operation_EndInvoke_m452E39208E659A1CDAC9F1B50DB7ECAEE928C0C7 (void);
-// 0x00000018 System.Void Calculator/<>c::.cctor()
-extern void U3CU3Ec__cctor_mDC21AC40F84AB19FC9B5C09B2C73344F2E8FC1C9 (void);
-// 0x00000019 System.Void Calculator/<>c::.ctor()
-extern void U3CU3Ec__ctor_mE1D48226CF7254802F642CF4D35C50E894A7AA06 (void);
-// 0x0000001A System.Single Calculator/<>c::<CalculateRelult>b__1_0(System.Single,System.Single)
-extern void U3CU3Ec_U3CCalculateRelultU3Eb__1_0_m38BD0F30E2CD340EC9DBB4F15BB605A774DA15BF (void);
-// 0x0000001B System.Single Calculator/<>c::<CalculateRelult>b__1_1(System.Single,System.Single)
-extern void U3CU3Ec_U3CCalculateRelultU3Eb__1_1_m31BC9D989A38E5F3B455E7D633DD7DDEBD6515F8 (void);
-// 0x0000001C System.Single Calculator/<>c::<CalculateRelult>b__1_2(System.Single,System.Single)
-extern void U3CU3Ec_U3CCalculateRelultU3Eb__1_2_mEBE9D81CCF10EC5E64ACBB4B1EAC8379D0BDFC84 (void);
-// 0x0000001D System.Single Calculator/<>c::<CalculateRelult>b__1_3(System.Single,System.Single)
-extern void U3CU3Ec_U3CCalculateRelultU3Eb__1_3_m436E6B31AAE898FCD76F1FD0FF9DAE918CE8D255 (void);
-// 0x0000001E System.Void CalculatorView::Awake()
+// 0x00000012 System.Void CalculatorView::Awake()
 extern void CalculatorView_Awake_mB33C438AE897B65353B0D2543913C86B95F8883B (void);
-// 0x0000001F System.String CalculatorView::GetResultat(System.String)
-extern void CalculatorView_GetResultat_m98DB69EDF90B8E2DBC956B114707BEF58EB43FCD (void);
-// 0x00000020 System.Void CalculatorView::GetResultat()
+// 0x00000013 System.String CalculatorView::Calculate()
+extern void CalculatorView_Calculate_m81D59F6D167022DA670F2247F8B4010B0DAF8BF3 (void);
+// 0x00000014 System.Void CalculatorView::AddToLabels(System.Char)
+extern void CalculatorView_AddToLabels_m003687A658477384B914868ACD05951E9DF7661D (void);
+// 0x00000015 System.Void CalculatorView::GetResultat()
 extern void CalculatorView_GetResultat_m4705E808CCD9FE0010B0215BEF914F50165DCE94 (void);
-// 0x00000021 System.Void CalculatorView::Delete()
+// 0x00000016 System.Void CalculatorView::Delete()
 extern void CalculatorView_Delete_m3DFD8183C8B0942FD3B5989DCCEFBF0136108F6A (void);
-// 0x00000022 System.Void CalculatorView::Add(System.Char)
+// 0x00000017 System.Void CalculatorView::Add(System.Char)
 extern void CalculatorView_Add_m2399A01AFA9BE4B9A9E746F736672B8172553CF5 (void);
-// 0x00000023 System.Void CalculatorView::.ctor()
+// 0x00000018 System.Void CalculatorView::.ctor()
 extern void CalculatorView__ctor_m1EFFF79660D98601BD4BE8FBADEB0087A317A8B6 (void);
-// 0x00000024 System.Collections.Generic.List`1<System.String> Parser::Parse(System.String)
-extern void Parser_Parse_m0432930DB9C854333B60AC94353B914B3BE83FA4 (void);
-// 0x00000025 System.Void Parser::Add(System.Char,System.Collections.Generic.List`1<System.String>)
-extern void Parser_Add_m20A7E054BA1D428B4FA40AA96F5172A2C1677495 (void);
-// 0x00000026 System.Void Parser::Validate(System.Collections.Generic.List`1<System.String>)
-extern void Parser_Validate_mF87D3FB512B14228FD8620CD6D331A58D16E5363 (void);
-// 0x00000027 System.Void Parser::.ctor()
-extern void Parser__ctor_m418E2F177F3CA7DD3C3FFFB89C4D1381833CAAAF (void);
-static Il2CppMethodPointer s_methodPointers[39] = 
+// 0x00000019 System.Single Operand::get_Value()
+extern void Operand_get_Value_mFEDDAC9992C551C81AD442507B7A53E3339DA559 (void);
+// 0x0000001A System.Void Operand::set_Value(System.Single)
+extern void Operand_set_Value_m405363D022639B4598B19F7629AF0B293547F733 (void);
+// 0x0000001B System.Void Operand::TryParse(System.String)
+extern void Operand_TryParse_m7839F5E195B12122D043890C5AD4647EDE0BEC81 (void);
+// 0x0000001C System.Boolean Operand::Point?heck(System.Char&)
+extern void Operand_PointU421heck_m11C653FDDA3F44551F8B5C0D9C5B89F8C3AEB6C7 (void);
+// 0x0000001D System.Boolean Operand::TryAddValue(System.Char&)
+extern void Operand_TryAddValue_m9CA65FC69BB611C1D613191E58AEF8D7DEADE307 (void);
+// 0x0000001E System.Void Operand::SetValue(System.Single)
+extern void Operand_SetValue_m1495D3B2676F22B07C231D995EE9303806CBAFB2 (void);
+// 0x0000001F System.Boolean Operand::TryDelete()
+extern void Operand_TryDelete_mF06D1A8C730E6973D4D91A4F228BAA9F2D2B6A10 (void);
+// 0x00000020 System.Void Operand::.ctor()
+extern void Operand__ctor_mA16408290159F59CAD4A72E1EA34687099FCB62A (void);
+static Il2CppMethodPointer s_methodPointers[32] = 
 {
 	AnimatorLabels_Awake_mF6D06B105C73D848A99E20B6A725BC885F05BC2D,
 	AnimatorLabels_OnEnable_mB4C033AC4621B27C53AD81631CB66574003A621E,
@@ -106,79 +92,65 @@ static Il2CppMethodPointer s_methodPointers[39] =
 	ButtonScript_Start_m8B6809AE1C4A4E3B431BBC17203BE7FE8C23DFBC,
 	ButtonScript_SetData_m0977BE927779A78F77CEAA018B73E187DF48095B,
 	ButtonScript__ctor_m8877AA5F1151123B36B4513BD26E3547494C3FB8,
-	Calculator_CalculateRelult_mC42F5FF111CBB06F948B75375549C6A30BD72ECC,
-	Calculator_CalculateResult_mB92A57B73B4E22086808FB60959C31F137FD6578,
-	Calculator_DeleteDeletingU421alculations_mBBCFC6AC7E1909DA6BC3C5DFC26A49EBF1D64FF8,
-	Calculator_ConverToFloat_mF36D166A32B1AD3B6F85F0F3B1CF8ABEDBA1140D,
+	Calculator_CalculateRelult_m5411728A22BBFAB233F7B1499F3EEFEBEB0F3A96,
+	Calculator_DeleteData_mC63BA568A6123DE75D883C735D61C8F289A9FAEB,
 	Calculator__ctor_m200AB354A8511A054C991ABA75694DC588E87EEC,
-	Operation__ctor_m4BB0340601CE0D8E31F235FE5AE1FA9CE80CEF0D,
-	Operation_Invoke_m6A59DE7E7F6F416BBBEC6313A032005CECFAB1DE,
-	Operation_BeginInvoke_mED0A458C1D3534A2A835FD8969A8C5C78F57FF19,
-	Operation_EndInvoke_m452E39208E659A1CDAC9F1B50DB7ECAEE928C0C7,
-	U3CU3Ec__cctor_mDC21AC40F84AB19FC9B5C09B2C73344F2E8FC1C9,
-	U3CU3Ec__ctor_mE1D48226CF7254802F642CF4D35C50E894A7AA06,
-	U3CU3Ec_U3CCalculateRelultU3Eb__1_0_m38BD0F30E2CD340EC9DBB4F15BB605A774DA15BF,
-	U3CU3Ec_U3CCalculateRelultU3Eb__1_1_m31BC9D989A38E5F3B455E7D633DD7DDEBD6515F8,
-	U3CU3Ec_U3CCalculateRelultU3Eb__1_2_mEBE9D81CCF10EC5E64ACBB4B1EAC8379D0BDFC84,
-	U3CU3Ec_U3CCalculateRelultU3Eb__1_3_m436E6B31AAE898FCD76F1FD0FF9DAE918CE8D255,
 	CalculatorView_Awake_mB33C438AE897B65353B0D2543913C86B95F8883B,
-	CalculatorView_GetResultat_m98DB69EDF90B8E2DBC956B114707BEF58EB43FCD,
+	CalculatorView_Calculate_m81D59F6D167022DA670F2247F8B4010B0DAF8BF3,
+	CalculatorView_AddToLabels_m003687A658477384B914868ACD05951E9DF7661D,
 	CalculatorView_GetResultat_m4705E808CCD9FE0010B0215BEF914F50165DCE94,
 	CalculatorView_Delete_m3DFD8183C8B0942FD3B5989DCCEFBF0136108F6A,
 	CalculatorView_Add_m2399A01AFA9BE4B9A9E746F736672B8172553CF5,
 	CalculatorView__ctor_m1EFFF79660D98601BD4BE8FBADEB0087A317A8B6,
-	Parser_Parse_m0432930DB9C854333B60AC94353B914B3BE83FA4,
-	Parser_Add_m20A7E054BA1D428B4FA40AA96F5172A2C1677495,
-	Parser_Validate_mF87D3FB512B14228FD8620CD6D331A58D16E5363,
-	Parser__ctor_m418E2F177F3CA7DD3C3FFFB89C4D1381833CAAAF,
+	Operand_get_Value_mFEDDAC9992C551C81AD442507B7A53E3339DA559,
+	Operand_set_Value_m405363D022639B4598B19F7629AF0B293547F733,
+	Operand_TryParse_m7839F5E195B12122D043890C5AD4647EDE0BEC81,
+	Operand_PointU421heck_m11C653FDDA3F44551F8B5C0D9C5B89F8C3AEB6C7,
+	Operand_TryAddValue_m9CA65FC69BB611C1D613191E58AEF8D7DEADE307,
+	Operand_SetValue_m1495D3B2676F22B07C231D995EE9303806CBAFB2,
+	Operand_TryDelete_mF06D1A8C730E6973D4D91A4F228BAA9F2D2B6A10,
+	Operand__ctor_mA16408290159F59CAD4A72E1EA34687099FCB62A,
 };
-static const int32_t s_InvokerIndices[39] = 
+static const int32_t s_InvokerIndices[32] = 
 {
-	3430,
-	3430,
-	3430,
-	2465,
-	3430,
-	2778,
-	3430,
-	3280,
-	3338,
-	3430,
-	3338,
-	3430,
-	3430,
-	3430,
-	2463,
-	721,
-	4307,
-	2509,
-	3430,
-	1549,
-	1222,
-	486,
-	2509,
-	5173,
-	3430,
-	1222,
-	1222,
-	1222,
-	1222,
-	3430,
-	2463,
-	3430,
-	3430,
-	2864,
-	3430,
-	2463,
-	1589,
-	2795,
-	3430,
+	3427,
+	3427,
+	3427,
+	2462,
+	3427,
+	2775,
+	3427,
+	3277,
+	3335,
+	3427,
+	3335,
+	3427,
+	3427,
+	3427,
+	1197,
+	3994,
+	3427,
+	3427,
+	3335,
+	2861,
+	3427,
+	3427,
+	2861,
+	3427,
+	3371,
+	2823,
+	2792,
+	1901,
+	1901,
+	2823,
+	3277,
+	3427,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	39,
+	32,
 	s_methodPointers,
 	0,
 	NULL,

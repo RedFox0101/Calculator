@@ -1,69 +1,49 @@
-using System.Collections.Generic;
-using System.Globalization;
+ï»¿using System.Collections.Generic;
 
 public class Calculator
 {
-    private delegate float Operation(float x, float y);
-
-    public string CalculateRelult(List<string> data)
+    public Operand CalculateRelult( List<string> operation,  List<Operand> operands)
     {
-        while (data.Count > 2)
+        while (operation.Count > 0)
         {
             float resultat = 0;
-            for (int i = 0; i < data.Count; i++)
-            {
-                if (data[i].Contains("*"))
-                {
-                    resultat = CalculateResult(data, i, (x, y) => x * y);
-                    DeleteDeletingÑalculations(data, i, resultat);
-                }
-                else if (data[i].Contains("/"))
-                {
-                    if (data[i + 1] == "0")
-                    {
-                        return "Îøèáêà";
-                    }
 
-                    resultat = CalculateResult(data, i, (x, y) => x / y);
-                    DeleteDeletingÑalculations(data, i, resultat);
+            for (int i = 0; i < operation.Count; i++)
+            {
+                if (operation[i].Contains("*"))
+                {
+                    resultat = operands[i].Value * operands[i + 1].Value;
+                    DeleteData(operation, operands, resultat, i);
+                }
+                else if (operation[i].Contains("/"))
+                {
+                    resultat = operands[i].Value / operands[i + 1].Value;
+                    DeleteData(operation, operands, resultat, i);
                 }
             }
-            for (int i = 0; i < data.Count; i++)
+
+            for (int i = 0; i < operation.Count; i++)
             {
-                if (data[i].Contains("+"))
+                if (operation[i].Contains("+"))
                 {
-                    resultat = CalculateResult(data, i, (x, y) => x + y);
-                    DeleteDeletingÑalculations(data, i, resultat);
+                    resultat = operands[i].Value + operands[i + 1].Value;
+                    DeleteData(operation, operands, resultat, i);
                 }
-                else if (data[i].Contains("-"))
+                else if (operation[i].Contains("-"))
                 {
-                    if (data[i].Length == 1)
-                    {
-                        resultat = CalculateResult(data, i, (x, y) => x - y);
-                        DeleteDeletingÑalculations(data, i, resultat);
-                    }
+                    resultat = operands[i].Value - operands[i + 1].Value;
+                    DeleteData(operation, operands, resultat, i);
                 }
             }
         }
-        return data[0];
+
+        return operands[0];
     }
 
-    private float CalculateResult(List<string> data, int indexOfList, Operation operat)
+    private static void DeleteData(List<string> operation, List<Operand> operands, float resultat, int i)
     {
-        float operand_1 = ConverToFloat(data[indexOfList - 1]);
-        float operand_2 = ConverToFloat(data[indexOfList + 1]);
-        return  operat.Invoke(operand_1, operand_2);    
-    }
-
-    private static void DeleteDeletingÑalculations(List<string> data, int indexOfList, float resultat)
-    {
-        data.RemoveAt(indexOfList + 1);
-        data.RemoveAt(indexOfList);
-        data[indexOfList - 1] = resultat.ToString();
-    }
-
-    private float ConverToFloat(string operand)
-    {
-        return float.Parse(operand, CultureInfo.InvariantCulture.NumberFormat);
+        operands.RemoveAt(i + 1);
+        operands[i].SetValue(resultat);
+        operation.RemoveAt(i);
     }
 }

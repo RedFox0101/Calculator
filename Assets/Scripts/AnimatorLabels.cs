@@ -6,17 +6,17 @@ public class AnimatorLabels : MonoBehaviour
     [SerializeField] private Animator _animatorResultatLabel;
     [SerializeField] private Animator _animatorPrematureResultatLabel;
 
-    private float _time;
+    private float _animationPlayTime;
 
     private void Awake()
     {
-        _time = _animatorResultatLabel.GetCurrentAnimatorStateInfo(0).length;
+        _animationPlayTime = _animatorResultatLabel.GetCurrentAnimatorStateInfo(0).length;
 
     }
 
     private void OnEnable()
     {
-        StartCoroutine(StartAnimatin(_time));
+        StartCoroutine(StartAnimatin(_animationPlayTime));
     }
 
     private void OnDisable()
